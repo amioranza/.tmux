@@ -157,17 +157,17 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
-tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | GO: #(go version | cut -f3 -d" ") | K8S: #(kubectl config current-context) | #{username}#{root} | #{hostname} '
+tmux_conf_theme_status_left=' ❐ #S , ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | GO: #(go version | cut -f3 -d" ") | K8S Ctx: #(kubectl config current-context) | Docker Server: #(docker version -f {{.Server.Version}}) , Client: #(docker version -f {{.Server.Version}}) '
+tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} '
 
 # status left style
 tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
-tmux_conf_theme_status_left_bg='#ffff00,#ff00af,#00afff'  # yellow, pink, white blue
-tmux_conf_theme_status_left_attr='bold,none,none'
+tmux_conf_theme_status_left_bg='colour2,#d70000,colour57'  # yellow, pink, white blue
+tmux_conf_theme_status_left_attr='bold,bold,bold'
 
 # status right style
 tmux_conf_theme_status_right_fg='#e4e4e4,#e4e4e4,#e4e4e4,#000000' # white, white, white, black
-tmux_conf_theme_status_right_bg='#080808,#d70000,colour57,#00afff,#e4e4e4' # dark gray, red, white blue, white
+tmux_conf_theme_status_right_bg='#080808,#d70000,colour57' # dark gray, red, white blue, white
 tmux_conf_theme_status_right_attr='none,bold,bold'
 
 # pairing indicator
@@ -249,7 +249,7 @@ tmux_conf_copy_to_os_clipboard=false
 set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
