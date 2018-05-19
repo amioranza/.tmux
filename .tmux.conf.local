@@ -157,7 +157,7 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=' ❐ #S , ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | GO: #(go version | cut -f3 -d" ") | K8S Ctx: #(kubectl config current-context) | Docker Server: #(docker version -f {{.Server.Version}}) , Client: #(docker version -f {{.Server.Version}}) '
+tmux_conf_theme_status_left=' ❐ #S , ⏻#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | ⒼⓄ  #(go version | cut -f3 -d" ") | ⛴  #(kubectl config current-context) | 🐋  Server: #(docker version -f {{.Server.Version}}) , Client: #(docker version -f {{.Server.Version}}) '
 tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | 👤  #{username}#{root} | 🚀  #{hostname} '
 
 # status left style
