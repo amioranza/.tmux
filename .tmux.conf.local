@@ -161,14 +161,14 @@ tmux_conf_theme_status_left=' ❐ #S , ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h
 tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} '
 
 # status left style
-tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
-tmux_conf_theme_status_left_bg='colour2,#d70000,colour57'  # yellow, pink, white blue
-tmux_conf_theme_status_left_attr='bold,bold,bold'
+tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4,#e4e4e4,#000000'  # black, white , white
+tmux_conf_theme_status_left_bg='colour7,#d70000,colour57,colour18,colour5'  # yellow, pink, white blue
+tmux_conf_theme_status_left_attr='bold,bold,bold,bold,bold'
 
 # status right style
 tmux_conf_theme_status_right_fg='#e4e4e4,#e4e4e4,#e4e4e4,#000000' # white, white, white, black
-tmux_conf_theme_status_right_bg='#080808,#d70000,colour57' # dark gray, red, white blue, white
-tmux_conf_theme_status_right_attr='none,bold,bold'
+tmux_conf_theme_status_right_bg='#080808,#d70000,colour57,#d70000' # dark gray, red, white blue, white
+tmux_conf_theme_status_right_attr='none,bold,bold,none'
 
 # pairing indicator
 tmux_conf_theme_pairing='👓 '          # U+1F453
